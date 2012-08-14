@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="qunit/qunit.css" />
+    <script type="text/javascript" src="qunit/qunit.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+  </head>
+  <body>
+    <h2 id="qunit-banner" style="text-align: center;height: auto">QUnit</h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <ol id="qunit-testrunner-toolbar"></ol>
+    <div id="test-elements"></div>
+    <div id="find_tests"></div>
+
+    <script type="text/javascript">
+      var tab = { "url": "A" };
+
+      chrome = {
+        "browserAction": {
+          "onClicked": {
+            "addListener": function(cb) {
+              cb(tab);
+            }
+          }
+        }
+      };
+
+      alert = function(text) {
+        test("test1", function() {
+          equal(text, "A", "text == 'A'");
+        });
+      };
+
+      test("test2", function() {
+        tab = undefined;
+
+        initBackground(function(text) {
+          deepEqual(text, null, "text == null (tab argument is undefined)");
+        });
+
+        tab = null;
+
+        initBackground(function(text) {
+          deepEqual(text, null, "text == null (tab argument is null)");
+        });
+
+        tab = "dummy";
+
+        initBackground(function(text) {
+          deepEqual(text, null, "text == null (tab isn`t a object)");
+        });
+
+        tab = {};
+
+        initBackground(function(text) {
+          deepEqual(text, null, "text == null (tab argument not in property 'url')");
+        });
+
+        tab = {
+          "url": {
+          }
+        };
+
+        initBackground(function(text) {
+          deepEqual(text, null, "text == null (tab argument 'url' property isn`t string)");
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="background.js"></script>
+  </body>
+</html>
