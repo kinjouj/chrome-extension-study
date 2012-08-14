@@ -1,0 +1,14 @@
+{
+  "name": "test4",
+  "version": "0.1",
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "test4"
+//    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "http://*/", "https://*/"]
+}
