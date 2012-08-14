@@ -1,0 +1,10 @@
+{
+  "name": "test6",
+  "version": "0.1",
+  "manifest_version": 2,
+  "omnibox": { "keyword": "twi" },
+  "background": {
+    "scripts": ["jquery.js", "sha1.js", "oauth.js", "const.js", "background.js"]
+  },
+  "permissions": ["tabs", "https://api.twitter.com/"]
+}

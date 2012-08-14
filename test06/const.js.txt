@@ -1,0 +1,4 @@
+const OAUTH_CONSUMER_KEY = "";
+const OAUTH_CONSUMER_SECRET = "";
+const OAUTH_ACCESS_TOKEN = "";
+const OAUTH_ACCESS_TOKEN_SECRET = "";
