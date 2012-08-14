@@ -1,0 +1,5 @@
+[binding_model=by_value, include="hoge.h"]
+class Hoge {
+    Hoge();
+    std::string say();
+};
