@@ -76,4 +76,10 @@ QUnit TestCase
 chrome.storage
 
 
+*test13*
+
+
+chrome.extension.connect and Port.onMessage
+
+
 ※Chromium is not supported
