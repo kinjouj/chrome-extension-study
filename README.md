@@ -81,6 +81,12 @@ chrome.storage (Chromium is not supported)
 chrome.extension.connect and Port.onMessage
 
 
+##test14
+
+
+chrome.experimental.infobar
+
+
 ##extra
 
 
