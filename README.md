@@ -87,6 +87,13 @@ chrome.extension.connect and Port.onMessage
 chrome.experimental.infobar
 
 
+##test15
+
+
+chrome.experimental.socket
+
+
+
 ##extra
 
 
