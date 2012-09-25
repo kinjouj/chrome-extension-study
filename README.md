@@ -93,6 +93,11 @@ chrome.experimental.infobar
 chrome.experimental.socket
 
 
+##test16
+
+
+chrome.test
+
 
 ##extra
 
